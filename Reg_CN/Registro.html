@@ -12,11 +12,11 @@
 
 	<div class="Registro">
 
-		<form method="post">
+		<form method="post" action="CN_php.php">
 
-			<span class="fontawesome-user"></span><input type="text" required placeholder="Nombre de usuario" autocomplete="off"> 
-			<span class="fontawesome-envelope-alt"></span><input type="text" id="email" required placeholder="Correo" autocomplete="off">
-			<span class="fontawesome-lock"></span><input type="password" name="password" id="password" required placeholder="Contraseña" autocomplete="off" maxlength="16" minlength="8"> 
+			<span class="fontawesome-user"></span><input type="text" required placeholder="Nombre de usuario" autocomplete="off" name="nombre"> 
+			<span class="fontawesome-envelope-alt"></span><input type="text" id="email" required placeholder="Correo" autocomplete="off" name="mail">
+			<span class="fontawesome-lock"></span><input type="password" name="pass" id="password" required placeholder="Contraseña" autocomplete="off" maxlength="16" minlength="8"> 
 
 		<input type="submit" value="Registrar" title="Registra tu cuenta">
 
