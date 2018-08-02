@@ -5,7 +5,6 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="TNT_css.css">
-  <link rel="stylesheet" type="text/css" href="TNT_jquery.js">
   <link rel="shortcut icon" type="image/png" href="TNT.png	">
   <title>Registro</title>
 </head>
@@ -15,28 +14,28 @@
 
   <h1>Crear una cuenta</h1>
   <p>Para crear una cuenta ingrese la informacion en las siguientes casillas.</p>
-  <form class="form" method="post" action="yourpage.html">
+  <form class="form" method="post" action="TNT_php.php">
     <p>Datos personales:</p>
-    <input type="text" class="name" placeholder="Nombre">
+    <input type="text" class="nombre" placeholder="Nombre" name="nombre">
 
-    <input type="email" class="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" >
+    <input type="email" class="mail" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="mail" >
 
-    <input type="password" name="pass" placeholder="Contraseña" required minlength="8" maxlength="16" pattern="[a-zA-Z_0-9@\!#\$\^%&*()+=\-[]\\\';,\.\/\{\}\|\:<>\? ]">
+    <input type="password" name="pass" placeholder="Contraseña" required minlength="8" maxlength="16" pattern="[a-zA-Z_0-9@\!#\$\^%&*()+=\-[]\\\';,\.\/\{\}\|\:<>\? ]" name="pass">
 
-    <input type="password" name="passch" placeholder="Confirmar contraseña">
+    <input type="password" name="passch" placeholder="Confirmar contraseña" name="passch">
 
     <p>Datos de la tarjeta:</p>
 
-    <input type="text" name="titular" placeholder="Nombre del titular" required>
+    <input type="text" name="titular" placeholder="Nombre del titular" required name="titular">
 
-    <input type="number" name="card" placeholder="Número de la tarjeta" required minlength="16" maxlength="16">
+    <input type="number" name="card" placeholder="Número de la tarjeta" required minlength="16" maxlength="16" name="card">
 
-    <div  id="expiration-date">
+    <div  id="expiration-date" name="exp">
                 <label>Fecha de vencimiento:</label>
                 <br><br>
                 <select>
                     <option disabled selected>Mes</option>
-                    <option value="01">Enero</option>
+                    <option value="01">January</option>
                     <option value="02">Febrero</option>
                     <option value="03">Marzo</option>
                     <option value="04">Abril</option>
@@ -51,19 +50,19 @@
                 </select>
                 <select>
                     <option disabled selected>Año</option>
-                    <option value="18"> 2018</option>
-                    <option value="19"> 2019</option>
-                    <option value="20"> 2020</option>
-                    <option value="21"> 2021</option>
-                    <option value="22"> 2022</option>
-                    <option value="23"> 2023</option>
-                    <option value="24"> 2024</option>
-                    <option value="25"> 2025</option>
-                    <option value="26"> 2026</option>
-                    <option value="27"> 2027</option>
-                    <option value="28"> 2028</option>
-                    <option value="29"> 2029</option>
-                    <option value="30"> 2030</option>
+                    <option value="018"> 2018</option>
+                    <option value="019"> 2019</option>
+                    <option value="020"> 2020</option>
+                    <option value="021"> 2021</option>
+                    <option value="022"> 2022</option>
+                    <option value="023"> 2023</option>
+                    <option value="024"> 2024</option>
+                    <option value="025"> 2025</option>
+                    <option value="026"> 2026</option>
+                    <option value="027"> 2027</option>
+                    <option value="028"> 2028</option>
+                    <option value="029"> 2029</option>
+                    <option value="030"> 2030</option>
                 </select>
             </div>
 
