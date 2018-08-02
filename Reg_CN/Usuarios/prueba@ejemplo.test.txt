@@ -1,0 +1,5 @@
+
+	Nombre: Prueba
+	E-mail: prueba@ejemplo.test
+	Contraseña: test123456
+	
