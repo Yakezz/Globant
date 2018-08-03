@@ -16,57 +16,59 @@
   <p>Para crear una cuenta ingrese la informacion en las siguientes casillas.</p>
   <form class="form" method="post" action="TNT_php.php">
     <p>Datos personales:</p>
-    <input type="text" class="nombre" placeholder="Nombre" name="nombre">
+    <input type="text" class="nombre" placeholder="Nombre" name="nombre" required>
 
-    <input type="email" class="mail" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="mail" >
+    <input type="email" class="mail" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="mail" required>
 
-    <input type="password" name="pass" placeholder="Contraseña" required minlength="8" maxlength="16" pattern="[a-zA-Z_0-9@\!#\$\^%&*()+=\-[]\\\';,\.\/\{\}\|\:<>\? ]" name="pass">
+    <input type="password" name="pass" placeholder="Contraseña" required minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pass">
 
-    <input type="password" name="passch" placeholder="Confirmar contraseña" name="passch">
+    <input type="password" name="passch" placeholder="Confirmar contraseña" name="passch" required minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
 
     <p>Datos de la tarjeta:</p>
 
-    <input type="text" name="titular" placeholder="Nombre del titular" required name="titular">
+    <input type="text" placeholder="Nombre del titular" required name="titular">
 
-    <input type="number" name="card" placeholder="Número de la tarjeta" required minlength="16" maxlength="16" name="card">
+    <input type="text" placeholder="Número de la tarjeta" minlength="16" maxlength="16" name="tarjeta" required>
 
-    <div  id="expiration-date" name="exp">
-                <label>Fecha de vencimiento:</label>
+    <label>Fecha de vencimiento:</label>
                 <br><br>
-                <select>
+    <div  id="expiration-date" >
+                <select name="expMes" required>
                     <option disabled selected>Mes</option>
-                    <option value="01">January</option>
-                    <option value="02">Febrero</option>
-                    <option value="03">Marzo</option>
-                    <option value="04">Abril</option>
-                    <option value="05">Mayo</option>
-                    <option value="06">Junio</option>
-                    <option value="07">Julio</option>
-                    <option value="08">Agosto</option>
-                    <option value="09">Septiembre</option>
-                    <option value="10">Octubre</option>
-                    <option value="11">Noviembre</option>
-                    <option value="12">Diciembre</option>
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
                 </select>
-                <select>
+			</div>
+			<div id="expiration-date">
+                <select name="expA" required>
                     <option disabled selected>Año</option>
-                    <option value="018"> 2018</option>
-                    <option value="019"> 2019</option>
-                    <option value="020"> 2020</option>
-                    <option value="021"> 2021</option>
-                    <option value="022"> 2022</option>
-                    <option value="023"> 2023</option>
-                    <option value="024"> 2024</option>
-                    <option value="025"> 2025</option>
-                    <option value="026"> 2026</option>
-                    <option value="027"> 2027</option>
-                    <option value="028"> 2028</option>
-                    <option value="029"> 2029</option>
-                    <option value="030"> 2030</option>
+                    <option value="2018"> 2018</option>
+                    <option value="2019"> 2019</option>
+                    <option value="2020"> 2020</option>
+                    <option value="2021"> 2021</option>
+                    <option value="2022"> 2022</option>
+                    <option value="2023"> 2023</option>
+                    <option value="2024"> 2024</option>
+                    <option value="2025"> 2025</option>
+                    <option value="2026"> 2026</option>
+                    <option value="2027"> 2027</option>
+                    <option value="2028"> 2028</option>
+                    <option value="2029"> 2029</option>
+                    <option value="2030"> 2030</option>
                 </select>
             </div>
 
-    <input type="number" name="secret" placeholder="Codigo de verificacion" required minlength="3" maxlength="3" pattern="[0-9]+">
+    <input type="text" name="secret" placeholder="Codigo de verificacion" required minlength="3" maxlength="3" pattern="[0-9]+">
 
     <input type="submit" class="submit" value="Registrarse">
   </form>
